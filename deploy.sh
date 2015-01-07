@@ -6,8 +6,7 @@
     rm -r /tmp/_site
     cp -r _site/ /tmp
     git checkout master
-    rm -r ./*
-    cp -r /tmp/_site/* ./
+    cp -rf /tmp/_site/* ./
     git add -A
     git commit -m "update blog"
     git push origin master
