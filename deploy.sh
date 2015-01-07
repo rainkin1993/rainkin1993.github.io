@@ -7,6 +7,7 @@
     cp -r _site/ /tmp
     git checkout master
     cp -rf /tmp/_site/* ./
+    git status
     git add -A
     git commit -m "update blog"
     git push origin master
