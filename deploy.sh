@@ -3,11 +3,13 @@
     git add -A
     git commit -m "update source"
     cp -r _site/ /tmp/
+    rm -r /tmp/_site
+    cp -r _site/ /tmp
     git checkout master
     rm -r ./*
     cp -r /tmp/_site/* ./
     git add -A
-    git commit -m "deploy blog"
+    git commit -m "update blog"
     git push origin master
     git checkout source
     echo "deploy succeed"
