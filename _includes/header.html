@@ -1,11 +1,10 @@
-
-<div id="header" >
+<div id="header" {% if page.group == "home" %} class="fixed" {% endif %}>
 	<div class="ui padded page centered grid" >
-		<div class="twelve wide column" style="">		
+		<div class="twelve wide column">		
 
 			<div class="logo">
-				<a href="#">
-					<img class="ui circular image" src="assets/images/logo.png">
+				<a href="/">
+					<img class="ui circular image" src={{ "/assets/images/logo.png" | prepend: site.baseurl }}>
 				</a>				
 			</div>	
 
@@ -18,19 +17,24 @@
 					</div>
 			</div>
 
-			<div class="ui large left floated secondary menu">		
-				<a class="active item">					
-					 Home					 
-				</a>        
-				<a class="item">
-					 About
-				</a>
-				<a class="item">
-					 Archive
-				</a>				
+			<div class="ui large left floated secondary menu">						
+
+				<a href="{{ BASE_PATH }}/" class="
+					{% if page.group == "home" %} active {% endif %}
+				item">Home</a>							
+
+				{% assign pages_list = site.pages %}				
+				{% for node in pages_list %}				    
+					{% if node.title != null %}						
+						{% if page.url == node.url %}
+							<a href="{{ BASE_PATH }}{{node.url}}" class="active item">{{node.title}}</a>	
+						{% else %}
+							<a href="{{ BASE_PATH }}{{node.url}}" class="item">{{node.title}}</a>
+						{% endif %}						
+					{% endif %}
+				{% endfor %}
+				{% assign pages_list = nil %}				
 			</div>
-
-
 
 		</div>
 	</div>
