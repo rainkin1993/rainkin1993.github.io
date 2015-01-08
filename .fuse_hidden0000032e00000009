@@ -1,0 +1,49 @@
+---
+layout: home 
+group: home
+---
+
+<div id="post-list">
+  <div class="ui padded page centered grid">
+    <div class="twelve wide column">      
+
+      <ul>
+        {% for post in site.posts %}          
+          <li class="post-item">
+            <a class="post-group">
+              <img src={{ "/assets/images/test.jpg" | prepend: site.baseurl}} class="ui tiny circular image ">
+            </a>                      
+
+            <h2 class="post-title">
+              <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+            
+            <div class="post-meta">
+              <i class="calendar icon"></i>{{ post.date | date: "%b %-d, %Y" }}
+              <i class="edit icon"></i>By {{ post.author}}
+
+              <span class="post-tags">
+                {% for tag in post.tags %}
+                  <a class="ui {% cycle "teal", "red", "blue", "green", "teal", "orange", "yellow", "red", "green","orange","blue" %} tag label">{{ tag }}</a>           
+                {% endfor %}                     
+              </span>
+
+            </div>            
+
+            <h1>
+              <img alt="" src="http://liyouhai.qiniudn.com/2014-05-04-intellij-idea-guide-note01.jpg/top">
+            </h1>
+
+            <blockquote class="post-excerpt">
+              <p>{{ post.excerpt }}</p>
+            </blockquote>
+
+          </li>
+          <div class="ui divider"></div>
+        {% endfor %}
+      </ul>      
+ 
+    </div>    
+  </div>  
+</div>
+
