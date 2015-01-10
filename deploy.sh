@@ -10,7 +10,9 @@
     cp -r _site/ /tmp
 
     git checkout master
+    ll
     cp -rf /tmp/_site/* ./    
+    ll
     git rm .fuse_hidden*
 
     git add -A
