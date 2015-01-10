@@ -1,5 +1,7 @@
     git checkout source
     jekyll build
+    rm .fuse_hidden*
+
     git add -A
     git commit -m "update source"
 
@@ -9,7 +11,8 @@
 
     git checkout master
     cp -rf /tmp/_site/* ./    
-    rm .fuse_hidden*
+    rm .fuse_hidden
+
     git add -A
     git commit -m "update blog"
     git push origin master
