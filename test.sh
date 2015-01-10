@@ -1,22 +1,2 @@
 git checkout source
-echo 1231231223
-echo 123123122
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
-    echo "push source"
+git push origin source
