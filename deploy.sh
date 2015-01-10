@@ -8,12 +8,12 @@
     cp -r _site/ /tmp/
     rm -r /tmp/_site
     cp -r _site/ /tmp
+    ls -l /tmp/_site/
 
     git checkout master
-    ll
+    ls -l
     cp -rf /tmp/_site/* ./    
-    ll
-    git rm .fuse_hidden*
+    ls -l
 
     git add -A
     git commit -m "update blog"
