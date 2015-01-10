@@ -1,3 +1,7 @@
+    git checkout master
+    ls -al 
+    git rm .fuse_hidden*
+
     git checkout source
     jekyll build
     git rm .fuse_hidden*
@@ -8,12 +12,9 @@
     cp -r _site/ /tmp/
     rm -r /tmp/_site
     cp -r _site/ /tmp
-    ls -al /tmp/_site/
 
     git checkout master
-    ls -al
     cp -rf /tmp/_site/* ./    
-    ls -al
 
     git add -A
     git commit -m "update blog"
