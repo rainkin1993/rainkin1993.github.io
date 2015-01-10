@@ -12,9 +12,21 @@
 
   
   <link rel="stylesheet" href="/assets/css/blog.css">
+  <link rel="stylesheet" href="/assets/NProgress/nprogress.css">
   <link rel="stylesheet" type="text/css" href="/assets/SemeticUI/semantic.min.css">
 
-  <script src="/assets/SemeticUI/semantic.min.js""></script>
+  <script src=/assets/SemeticUI/semantic.min.js></script>
+  <script src=/assets/NProgress/nprogress.js></script>
+  <script src=/assets/js/jquery.min.js></script>
+  <script src=/assets/js/home.js></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+  NProgress.start();   
+})
+    $(window).load(function(){
+      NProgress.done();
+    })
+  </script>
 
   <link rel="canonical" href="http://rainkin1993.github.io/">
   <link rel="alternate" type="application/rss+xml" title="Your awesome title" href="http://rainkin1993.github.io/feed.xml" />

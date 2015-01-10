@@ -1,0 +1,84 @@
+  
+  /*global site*/
+  body{
+    background-color: white;
+  }
+
+  /*header*/
+  #header .grid .logo {
+  	width:35px;
+  	height:35px;
+  	float:left;
+  	margin-right: 10px;
+  }
+  
+  #header{
+ 		background-color: white; 		
+ 		width: 100%;
+    border-bottom: solid #e7e7e7 1px;
+  } 
+
+  #header.fixed{
+    position: fixed;  
+    z-index: 999;
+  }
+
+  #header .ui.left.secondary.menu{
+    margin-top: 3px;
+  }
+
+  /*post-content*/
+  #post-content .grid .column{
+    border: 1px solid LightGrey;
+  }
+
+  /*post-list*/
+  #post-list .grid .column{
+    border-top: 1px solid LightGrey; 
+  }
+
+  #post-list{
+    min-height: 650px;
+    background-color: white;
+    padding-top: 106px;
+  }
+
+  #post-list .post-item{
+    display: block;        
+  }
+
+  #post-list .post-group{
+    max-width: 48px;
+    float: right;
+  }
+
+  #post-list ul{
+    padding-right: 40px;
+    margin-top: 0px;
+  }
+  
+  #post-list .post-title{
+    color: #222;
+    font-size: 1.8em;
+    line-height: 47px;
+    margin-bottom: 0.2em;
+  }
+
+  #post-list .post-excerpt{    
+    border-left: 5px solid #258aaf;
+    margin: 1em 0.3em;
+  }
+
+  #post-list .post-meta{
+    margin-top: 10px;
+  }
+
+  #post-list .post-tags{
+    margin-left: 12px;
+  }
+
+  #post-list .post-excerpt>p{
+    margin-left: 8px;    
+  }
+
+ 
