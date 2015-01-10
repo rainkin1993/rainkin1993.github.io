@@ -1,10 +1,5 @@
-    git checkout master
-    ls -al 
-    git rm .fuse_hidden*
-
     git checkout source
     jekyll build
-    git rm .fuse_hidden*
 
     git add -A
     git commit -m "update source"
