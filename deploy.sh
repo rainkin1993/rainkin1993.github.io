@@ -11,9 +11,9 @@
     ls -l /tmp/_site/
 
     git checkout master
-    ls -l
+    ls -al
     cp -rf /tmp/_site/* ./    
-    ls -l
+    ls -al
 
     git add -A
     git commit -m "update blog"
