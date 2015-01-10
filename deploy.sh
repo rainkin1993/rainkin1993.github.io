@@ -8,7 +8,7 @@
     cp -r _site/ /tmp/
     rm -r /tmp/_site
     cp -r _site/ /tmp
-    ls -l /tmp/_site/
+    ls -al /tmp/_site/
 
     git checkout master
     ls -al
