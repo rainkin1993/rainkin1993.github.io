@@ -16,11 +16,13 @@
   <link rel="stylesheet" type="text/css" href="/assets/SemeticUI/semantic.min.css">
 
   
+
   <script src=/assets/js/jquery.min.js></script>
   <script src=/assets/js/blog.js></script>
   <script src=/assets/ScrollUp/jquery.scrollUp.js></script>
   <script src=/assets/SemeticUI/semantic.min.js></script>
   <script src=/assets/NProgress/nprogress.js></script>
+  <script src=/assets/js/toc.min.js></script>
 
 
   <link rel="canonical" href="http://rainkin1993.github.io/jekyll/update/2015/01/08/welcome-to-jekyll.html">
@@ -28,20 +30,75 @@
 </head>
 
 
-  <body>
+  <body>    
+    <div id="header" >
+	<div class="ui padded page centered grid" >
+		<div class="twelve wide column">		
 
-    
+			<div class="logo">
+				<a href="/">
+					<img class="ui circular image" src=/assets/images/logo.png>
+				</a>				
+			</div>	
+
+			<div class="ui right floated menu">
+					<div class="item">
+						<div class="ui transparent icon input"> 
+							<input placeholder="Search..." type="text">
+							<i class="search link icon"></i>
+						</div>
+					</div>
+			</div>
+
+			<div class="ui large left floated secondary menu">						
+
+				<a href="/" class="
+					
+				item">Home</a>							
+
+								
+								    
+											
+						
+							<a href="/about/" class="item">About</a>
+												
+					
+								    
+					
+								    
+					
+								    
+					
+				
+								
+			</div>
+
+		</div>
+	</div>
+</div>
+
 
     <div id="content">
     	<div class="ui padded page centered grid">
     		<div class="eleven wide column">
-    		 		<header class="post-header">
-    		 		  <h1 class="post-title">Welcome to Jekyll!</h1>
-    		 		  <p class="post-meta">Jan 8, 2015 • rainkin</p>
-    		 		</header>
+                    
+                    <div class="left-block ">
+                        <!-- <a>
+                        <img src="/assets/images/avatar.jpg" class="ui small circular image"> </a>              -->
+                        <div id="toc" class="ui vertical pointing secondary menu" ></div>                   
+                    </div>
 
-    		 		<article class="post-content">
-    		 		  <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+                    <div class="middle-block">
+        		 		<header class="post-header">
+        		 		  <h1 class="post-title">Welcome to Jekyll!</h1>
+        		 		  <p class="post-meta">
+                            <i class="calendar icon"></i>Jan 8, 2015
+                            <i class="edit icon"></i>By rainkin
+                          </p>
+        		 		</header>
+
+        		 		<article class="post-content">
+        		 		  <p>You’ll find this post in your <code>_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code>jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
 
 <!--excerpt-->
 
@@ -58,7 +115,8 @@
 <p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
 
 
-    		 		</article>
+        		 		</article>
+                    </div>
     		</div>
     	</div>    	
     </div>

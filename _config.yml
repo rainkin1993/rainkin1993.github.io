@@ -14,9 +14,12 @@ url: "http://rainkin1993.github.io" # the base hostname & protocol for your site
 twitter_username: jekyllrb
 github_username:  rainkin1993
 paginate: 3
-
+avatar: "/assets/images/avatar.jpg"
 
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
+
+
+

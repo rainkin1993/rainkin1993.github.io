@@ -3,21 +3,31 @@
 
   {% include head.html %}
 
-  <body>
-
-    
-
+  <body>    
+    {% include header.html %}
     <div id="content">
     	<div class="ui padded page centered grid">
     		<div class="eleven wide column">
-    		 		<header class="post-header">
-    		 		  <h1 class="post-title">{{ page.title }}</h1>
-    		 		  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    		 		</header>
+                    
+                    <div class="left-block ">
+                        <!-- <a>
+                        <img src="{{ site.avatar | prepend: site.baseurl}}" class="ui small circular image"> </a>              -->
+                        <div id="toc" class="ui vertical pointing secondary menu" ></div>                   
+                    </div>
 
-    		 		<article class="post-content">
-    		 		  {{ content }}
-    		 		</article>
+                    <div class="middle-block">
+        		 		<header class="post-header">
+        		 		  <h1 class="post-title">{{ page.title }}</h1>
+        		 		  <p class="post-meta">
+                            <i class="calendar icon"></i>{{ page.date | date: "%b %-d, %Y" }}
+                            <i class="edit icon"></i>By {{ page.author}}
+                          </p>
+        		 		</header>
+
+        		 		<article class="post-content">
+        		 		  {{ content }}
+        		 		</article>
+                    </div>
     		</div>
     	</div>    	
     </div>
