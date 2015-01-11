@@ -81,4 +81,13 @@
     margin-left: 8px;    
   }
 
+  #post-list .next-url{
+    display: none;
+  }
+
+  #post-list .loading{
+    display: relative;
+    text-align: center;
+  }
+
  
