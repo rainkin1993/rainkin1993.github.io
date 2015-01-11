@@ -66,8 +66,11 @@
 
   #post-list .post-excerpt{    
     border-left: 5px solid #258aaf;
-    margin: 1em 0.3em;
+    margin: 1em 0em;
+    font-size: 16px;
+    padding-left: 0.7em;
   }
+
 
   #post-list .post-meta{
     margin-top: 10px;
@@ -76,9 +79,9 @@
   #post-list .post-tags{
     margin-left: 12px;
   }
-
-  #post-list .post-excerpt>p{
-    margin-left: 8px;    
+  
+  #post-list .post-image{
+    margin-top: 15px;
   }
 
   #post-list .next-url{
@@ -88,6 +91,32 @@
   #post-list .loading{
     display: relative;
     text-align: center;
+  }
+
+  /*blog content*/
+  #content{
+    background-color: white;
+    min-height: 650px;    
+  }
+
+  #content .wide.column{
+    border: 1px solid LightGrey;
+    margin: 6% auto;
+    padding: 2% 5% 5%;
+    font-family: STFangSong,Helvetica,Arial,Vernada,Tahoma,STXihei,"Microsoft YaHei","Songti SC",SimSun,Heiti,sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+
+  }
+
+  #content .post-title{
+    border-bottom: 2px solid LightGrey;
+    color: #666666;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,Helvetica,STKaiti,SimSun,serif;
+    line-height: 150%;
+    margin-bottom: 40px;
+    padding: 5px;
+    width: 90%;
   }
 
  
