@@ -29,14 +29,18 @@ group: home
               </span>
 
             </div>            
+            
+            {% if post.image %}            
+              <img src="{{ post.image }}" class="ui image post-image">                                                      
+            {% endif %}
 
-            <h1>
-              <img alt="" src="http://liyouhai.qiniudn.com/2014-05-04-intellij-idea-guide-note01.jpg/top">
-            </h1>
+            <div class="post-excerpt">
+              <p>{{ post.content | split: "<!--excerpt-->" | first}}</p>
+            </div>
 
-            <blockquote class="post-excerpt">
-              <p>{{ post.excerpt }}</p>
-            </blockquote>
+            <div class="ui large label">
+              <a href="{{ post.url | prepend: site.baseurl}}">阅读全文</a>
+            </div>
 
           </li>
           <div class="ui divider"></div>

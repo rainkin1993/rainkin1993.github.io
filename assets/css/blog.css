@@ -66,8 +66,11 @@
 
   #post-list .post-excerpt{    
     border-left: 5px solid #258aaf;
-    margin: 1em 0.3em;
+    margin: 1em 0em;
+    font-size: 16px;
+    padding-left: 0.7em;
   }
+
 
   #post-list .post-meta{
     margin-top: 10px;
@@ -76,9 +79,9 @@
   #post-list .post-tags{
     margin-left: 12px;
   }
-
-  #post-list .post-excerpt>p{
-    margin-left: 8px;    
+  
+  #post-list .post-image{
+    margin-top: 15px;
   }
 
   #post-list .next-url{
