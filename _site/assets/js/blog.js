@@ -38,4 +38,14 @@ $(document).ready(function(){
 		});
 	};
 	
-})
+});
+
+// scroll up
+$(function () {
+    $.scrollUp({
+ 		animation: 'slide',
+      	activeOverlay: 'red',
+      	scrollDistance: 100,  
+      	scrollText: 'back to top'
+    });
+});

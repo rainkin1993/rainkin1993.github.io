@@ -6,15 +6,17 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  
+  <link rel="stylesheet" href="{{ "/assets/ScrollUp/themes/tab.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/css/blog.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "/assets/NProgress/nprogress.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" type="text/css" href="{{ "/assets/SemeticUI/semantic.min.css" | prepend: site.baseurl }}">
 
-  <script src={{ "/assets/SemeticUI/semantic.min.js" | prepend: site.baseurl }}></script>
-  <script src={{ "/assets/NProgress/nprogress.js" | prepend: site.baseurl }}></script>
+  
   <script src={{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}></script>
   <script src={{ "/assets/js/blog.js" | prepend: site.baseurl }}></script>
+  <script src={{ "/assets/ScrollUp/jquery.scrollUp.js" | prepend: site.baseurl }}></script>
+  <script src={{ "/assets/SemeticUI/semantic.min.js" | prepend: site.baseurl }}></script>
+  <script src={{ "/assets/NProgress/nprogress.js" | prepend: site.baseurl }}></script>
 
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
