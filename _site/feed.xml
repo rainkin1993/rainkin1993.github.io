@@ -6,19 +6,21 @@
 </description>
     <link>http://rainkin1993.github.io/</link>
     <atom:link href="http://rainkin1993.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Jan 2015 01:02:09 +0800</pubDate>
-    <lastBuildDate>Mon, 12 Jan 2015 01:02:09 +0800</lastBuildDate>
+    <pubDate>Mon, 12 Jan 2015 01:12:14 +0800</pubDate>
+    <lastBuildDate>Mon, 12 Jan 2015 01:12:14 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;&lt;img src=&quot;mahua-logo.jpg&quot; alt=&quot;mahua&quot; /&gt;
-##MaHua是什么?
-一个在线编辑markdown文档的编辑器&lt;/p&gt;
+        <description>&lt;h2 id=&quot;mahua&quot;&gt;MaHua是什么?&lt;/h2&gt;
+
+&lt;p&gt;一个在线编辑markdown文档的编辑器&lt;/p&gt;
 
 &lt;p&gt;向Mac下优秀的markdown编辑器mou致敬&lt;/p&gt;
 
-&lt;h2 id=&quot;mahua&quot;&gt;MaHua有哪些功能？&lt;/h2&gt;
+&lt;!--excerpt--&gt;
+
+&lt;h2 id=&quot;mahua-1&quot;&gt;MaHua有哪些功能？&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;方便的&lt;code&gt;导入导出&lt;/code&gt;功能

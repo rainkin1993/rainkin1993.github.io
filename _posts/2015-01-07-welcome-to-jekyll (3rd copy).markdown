@@ -8,11 +8,13 @@ tags: [jekyll , post , test]
 image: "http://liyouhai.qiniudn.com/2014-05-11-opensource-jekyll-theme-jekyllpure.jpg/top"
 ---
 
-![mahua](mahua-logo.jpg)
 ##MaHua是什么?
+
 一个在线编辑markdown文档的编辑器
 
 向Mac下优秀的markdown编辑器mou致敬
+
+<!--excerpt-->
 
 ##MaHua有哪些功能？
 
