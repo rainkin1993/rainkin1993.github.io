@@ -43,10 +43,21 @@ $(document).ready(function(){
 // scroll up
 $(function () {
     $.scrollUp({
- 		animation: 'slide',
+ 		animation: 'fade',
       	activeOverlay: 'red',
       	scrollDistance: 100,  
       	scrollText: 'back to top',
-      	scrollSpeed: 900
+      	scrollSpeed: 400
     });
+});
+
+// TOC:table of content
+$(function () {
+	$('#toc').toc({
+	     'selectors': 'h1,h2', //elements to use as headings
+	     'container': '.post-content', //element to find all selectors in
+	     'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+ 						 return "item";},
+		 'activeClass': "active" 						  						 
+	 });
 });
