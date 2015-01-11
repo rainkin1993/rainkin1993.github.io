@@ -93,4 +93,30 @@
     text-align: center;
   }
 
+  /*blog content*/
+  #content{
+    background-color: white;
+    min-height: 650px;    
+  }
+
+  #content .wide.column{
+    border: 1px solid LightGrey;
+    margin: 6% auto;
+    padding: 2% 5% 5%;
+    font-family: STFangSong,Helvetica,Arial,Vernada,Tahoma,STXihei,"Microsoft YaHei","Songti SC",SimSun,Heiti,sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+
+  }
+
+  #content .post-title{
+    border-bottom: 2px solid LightGrey;
+    color: #666666;
+    font-family: "Palatino Linotype","Book Antiqua",Palatino,Helvetica,STKaiti,SimSun,serif;
+    line-height: 150%;
+    margin-bottom: 40px;
+    padding: 5px;
+    width: 90%;
+  }
+
  

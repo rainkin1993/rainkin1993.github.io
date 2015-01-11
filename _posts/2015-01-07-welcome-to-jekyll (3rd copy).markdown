@@ -18,7 +18,7 @@ image: "http://liyouhai.qiniudn.com/2014-05-11-opensource-jekyll-theme-jekyllpur
 
 Jekyll also offers powerful support for code snippets:
 
-{% highlight ruby %}
+{% highlight ruby linenos %}
 def print_hi(name)
   puts "Hi, #{name}"
 end
