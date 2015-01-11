@@ -16,11 +16,19 @@ github_username:  rainkin1993
 paginate: 3
 avatar: "/assets/images/avatar.png"
 logo: "/assets/images/logo.png"
-
+comments: 
+	provider: duoshuo
+	duoshuo: 
+		short_name: rainkin1993githubio
 
 # Build settings
 markdown: kramdown
 highlighter: pygments
 
-
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      comments: true
 

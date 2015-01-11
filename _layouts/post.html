@@ -4,14 +4,14 @@
   {% include head.html %}
 
   <body>    
+
     {% include header.html %}
+
     <div id="content">
     	<div class="ui padded page centered grid">
     		<div class="eleven wide column">
                     
-                    <div class="left-block ">
-                        <!-- <a>
-                        <img src="{{ site.avatar | prepend: site.baseurl}}" class="ui small circular image"> </a>              -->
+                    <div class="right-block ">    
                         <div id="toc" class="ui vertical pointing secondary menu" ></div>                   
                     </div>
 
@@ -28,10 +28,14 @@
         		 		  {{ content }}
         		 		</article>
                     </div>
+
+                    <div class="ui horizontal divider">END</div>
+                    <!--comment-->
+                    {% include comment.html%}
     		</div>
     	</div>    	
-    </div>
-    
+    </div>    
+
 
   </body>
 
