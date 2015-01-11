@@ -9,8 +9,8 @@
     cp -r _site/ /tmp
 
     git checkout master
-    rm -r ./*
-    cp -r /tmp/_site/* ./    
+    rm -rf .
+    cp -rf /tmp/_site/* ./    
     git add -A
     git reset HEAD *.fuse_hidden*
     git commit -m "update blog"
