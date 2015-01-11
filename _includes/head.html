@@ -14,15 +14,8 @@
   <script src={{ "/assets/SemeticUI/semantic.min.js" | prepend: site.baseurl }}></script>
   <script src={{ "/assets/NProgress/nprogress.js" | prepend: site.baseurl }}></script>
   <script src={{ "/assets/js/jquery.min.js" | prepend: site.baseurl }}></script>
-  <script src={{ "/assets/js/home.js" | prepend: site.baseurl }}></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-  NProgress.start();   
-})
-    $(window).load(function(){
-      NProgress.done();
-    })
-  </script>
+  <script src={{ "/assets/js/blog.js" | prepend: site.baseurl }}></script>
+
 
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />

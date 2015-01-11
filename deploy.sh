@@ -1,6 +1,7 @@
     git checkout source
     jekyll build
     git add -A
+    git reset HEAD .fuse_hidden*
     git commit -m "update source"
 
     cp -r _site/ /tmp/
