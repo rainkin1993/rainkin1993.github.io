@@ -9,6 +9,7 @@
     cp -r _site/ /tmp
 
     git checkout master
+    rm -rf .
     cp -rf /tmp/_site/* ./    
     git add -A
     git reset HEAD *.fuse_hidden*
