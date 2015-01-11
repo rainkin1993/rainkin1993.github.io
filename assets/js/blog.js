@@ -46,6 +46,7 @@ $(function () {
  		animation: 'slide',
       	activeOverlay: 'red',
       	scrollDistance: 100,  
-      	scrollText: 'back to top'
+      	scrollText: 'back to top',
+      	scrollSpeed: 900
     });
 });
