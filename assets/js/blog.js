@@ -63,3 +63,13 @@ $(function () {
 });
 
 
+// highlight code --> disable the select and copy of lineno
+$(function(){
+	var linenos = $('.highlight .lineno');
+	$.each(linenos, function(index,value){ 
+		$(value).attr("data-lineno",$(value).text());
+		value.innerHTML = " ";
+	})
+	$("head").append("<style>.highlight .lineno:before{content: attr(data-lineno);color:#ccc;}</style>");	
+
+})
