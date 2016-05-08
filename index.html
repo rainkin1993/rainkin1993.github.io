@@ -10,9 +10,6 @@ group: home
       <ul class="post-block">
         {% for post in paginator.posts %}          
           <li class="post-item">
-            <a class="post-group">
-              <img src={{ "/assets/images/test.jpg" | prepend: site.baseurl}} class="ui tiny circular image ">
-            </a>                      
 
             <h2 class="post-title">
               <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
