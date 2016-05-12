@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+
+	{% seo %}
+
+	<link rel="stylesheet" type="text/css" href="/assets/js_css/semantic/semantic.min.css">
+	<link rel="stylesheet" href="/assets/js_css/han/han.min.css">
+	<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="/assets/js_css/jquery.min.js"></script> -->
+	<script type="text/javascript" src="/assets/js_css/toc.js"></script>	
+	
+	
+	<!-- <script src="dist/semantic/semantic.min.js"></script> -->
+	
+
+	<style>
+	.ui.menu img.logo {
+	  padding: 0.5em;
+	}
+
+	.ui.navigation.menu{
+	  border-bottom: solid #e7e7e7 1px;	  
+	  background-color: white;
+	}
+
+	.ui.navigation.menu .item{
+		color: #4183C4;
+	}
+	
+	.ui.navigation.menu a.item:hover{
+		color: #4183FF;
+	}
+
+	.ui.fixed.grid{
+	  position: fixed; 
+	  top: 0px;
+	  width: 100%;
+	  z-index: 9999;
+	}
+
+
+
+	.ui.main.grid {
+	  margin-top: 3em;
+	}
+
+	.ui.menu img.logo{
+		margin-left: 6.25%;
+	}
+
+	.ui.catalog.vertical.menu{
+		box-shadow: none;
+		border:0px;
+		border-right-width: 3px;
+		border-right-color: rgba(0, 0, 0, 0.0980392);
+		border-right-style: solid;
+
+		position: fixed;
+	}
+
+
+	.ui.catalog.vertical.menu .item.active{
+		border-left-width: 2px;
+		border-left-color: rgba(0, 0, 0, 0.4);
+		border-left-style: solid;		
+	}
+
+	.ui.catalog.vertical.menu .item.toc-h2{
+		font-size: 0.9em;
+		color: #444;
+	}
+
+	.ui.catalog.vertical.menu .item.toc-h3{
+		color: #666;
+		margin-left: 1em;
+		font-size: 0.8em;
+	}
+
+	.ui.catalog.vertical.menu .active.item.toc-h2{
+		font-size: 0.9em;
+		color: #444;
+	}
+
+	.ui.catalog.vertical.menu .active.item.toc-h3{
+		color: #666;
+		margin-left: 1em;
+		font-size: 0.8em;
+	}
+
+	.ui.content.segment{
+		box-shadow: none;
+		padding:4.5em;
+	}
+
+	.content article h1{
+		font-family: "Helvetica Neue", Helvetica, Arial, "STKaiti", sans-serif;
+		letter-spacing: .125em;
+		margin-top: -.5em;
+		margin-bottom: 1.75em;
+		border-bottom-style: inset;
+		color: #666666;
+	}
+
+	.content article h2{
+		color: #666666;
+		font-weight: normal;
+		margin-top: 2em;
+		margin-bottom: 1.5em;
+		border-bottom-style: inset;
+		border-bottom-width: 1px;
+	}
+
+	.content article h3{
+		color: #222222;
+		margin-bottom: 1.5em;
+	}
+
+	.content article p{
+		font-size: 1.125em;
+	}
+
+	.content article p.date{
+		font-family: "Helvetica Neue", Helvetica, Arial, "STKaiti", sans-serif;
+		margin-top: 2em;
+		color: #666;
+		text-align: right;
+	}
+
+
+	.content article .txt-center{
+		text-align: center;
+	}
+
+	.content article .txt-center p{
+		text-align: center;
+	}
+
+	@media screen and (max-width:900px){
+
+	.ui.catalog.vertical.menu{
+		display: none;
+	}
+
+	.ui.main.grid .ten.wide.column{
+		width: 100%!important;
+	}
+
+	}
+
+	</style>
+
+</head>
+<body>
+
+	{% include header.html %}	
+
+	<div class="ui main grid">
+		<div class="two wide column">
+		</div>
+		<div class="ten wide column">
+			<div class="ui very padded content segment">
+
+				<article>
+					{{ content }}	
+					<p class="date">{{ page.date | date: "%Y 年 %m 月 %d 日" }}</p>
+				</article>
+				
+				<div class="ui right close rail">
+				    <div class="ui catalog vertical pointing menu" id="toc">				      
+				    </div>
+		    	</div>
+
+		    	<script type="text/javascript">
+		    	$(function () {
+		    		// TOC:table of content
+		    		$('#toc').toc({
+		    		    'selectors': 'h2,h3', //elements to use as headings
+		    		    'container': '.content', //element to find all selectors in		    		    
+		    		    'prefix': 'toc', //prefix for anchor tags and class names		    		    		    		    
+		    		    'highlightOffset': 100, //offset to trigger the next headline
+		    		    'anchorName': function(i, heading, prefix) { //custom function for anchor name
+		    		        return prefix+i;
+		    		    },		    		    
+		    		    'activeClass': "active",
+		    		'itemClass': function(i, heading, $heading, prefix) { // custom function for item class
+		    		  return "item" + " " + prefix + '-' + heading.localName;
+		    		}
+		    		});
+		    	});
+		    	</script>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+title: Paradox of Life
+email: rainkin1993@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  生活的痛苦始于矛盾，
+  我对自己说，
+  请松开你的眉头，
+  离开眼前的屏幕，
+  看看身边关心你的人吧，
+  莫因远方缥缈的美好，
+  错失了脚下无价的珍宝。
+
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://paradoxlife.me" # the base hostname & protocol for your site
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+
+
+permalink: /:title
+
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      layout: "post"
+
+
+gems:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+author: rainkin1993
