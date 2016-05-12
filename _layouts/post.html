@@ -7,9 +7,12 @@
 
 	<link rel="stylesheet" type="text/css" href="/assets/js_css/semantic/semantic.min.css">
 	<link rel="stylesheet" href="/assets/js_css/han/han.min.css">
+	<link href="/assets/js_css/google-code-prettify/prettify.css" type="text/css" rel="stylesheet" />
+	
 	<script src="//cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
 	<!-- <script type="text/javascript" src="/assets/js_css/jquery.min.js"></script> -->
 	<script type="text/javascript" src="/assets/js_css/toc.js"></script>	
+	<script type="text/javascript" src="/assets/js_css/google-code-prettify/prettify.js"></script>
 	
 	
 	<!-- <script src="dist/semantic/semantic.min.js"></script> -->
@@ -174,6 +177,12 @@
 
 		    	<script type="text/javascript">
 		    	$(function () {
+
+		    		// google pretty code
+		    		$('pre').addClass('prettyprint linenums').attr('style', 'overflow:auto');
+		    		window.prettyPrint && prettyPrint();
+
+
 		    		// TOC:table of content
 		    		$('#toc').toc({
 		    		    'selectors': 'h2,h3', //elements to use as headings
