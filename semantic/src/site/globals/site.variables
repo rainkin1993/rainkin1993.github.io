@@ -1,0 +1,20 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+/*-------------------
+       Fonts
+--------------------*/
+
+@importGoogleFonts : false;
+
+@headerFont        : "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+@pageFont          : "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+
+/*-------------------
+      Base Sizes
+--------------------*/
+
+
+
+
