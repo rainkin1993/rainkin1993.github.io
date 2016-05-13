@@ -16,6 +16,9 @@
 	<script type="text/javascript" src="{{site.cdn}}/js_css/google-code-prettify/prettify.js{{site.cache_version}}"></script>
 	<script type="text/javascript" src="{{site.cdn}}/js_css/nprogress/nprogress.js{{site.cache_version}}"></script>
 
+	<script>var duoshuoQuery = {short_name:"rainkin"};</script>
+	<script src="http://static.duoshuo.com/embed.js"></script>
+
 	
 	
 	
@@ -211,10 +214,37 @@
 		    		NProgress.done();	
 		    	});
 		    	</script>
+
+
+		    	
+		    <a href="javascript:void(0);" onclick="toggleDuoshuoComments('#comment-box');" id="comments" style="display: block;text-align: right;">展开评论</a>
+		    	
 			</div>
+
+			
+				<div id="comment-box" ></div>
+				
+				{% capture key %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title }}{% endcapture %}
+				<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+				<script type="text/javascript">
+				function toggleDuoshuoComments(container){
+				    var el = document.createElement('div');//该div不需要设置class="ds-thread"
+				    el.setAttribute('data-thread-key', '{{key}}');//必选参数
+				    el.setAttribute('data-url', '{{site.url}}{{page.url}}');//必选参数
+				    el.setAttribute('data-author-key', 'rainkin');//可选参数
+				    DUOSHUO.EmbedThread(el);
+				    jQuery(container).append(el);
+				    $('#comments').remove();
+				    $(container).addClass("ui segment")
+				}
+					</script>
+				<!-- 多说公共JS代码 end -->
+			
 		</div>
 	</div>
 
+
+	
 </body>
 
 </html>
