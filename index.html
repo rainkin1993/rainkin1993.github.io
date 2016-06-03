@@ -93,6 +93,19 @@
     </div>
   </div>
 
+    <div class="ui piled segment">
+    <h3>屠龙之技</h3>
+    <div class="ui relaxed divided  page-index list">
+      {% for post in site.posts %} 
+        {% if post.categories contains 'technique'%}
+          <div class="item">      
+              <a href="{{ post.url }}">{{ post.title }}</a>        
+          </div>  
+        {% endif %}
+      {% endfor %}      
+    </div>
+  </div>
+
   
 </div>
 
