@@ -26,9 +26,9 @@ categories: technique
 
 
 
-| —————          | CREATE语句    | LOAD CSV语句               | Batch Inserter               | Batch Import                     | Neo4j-import                             |
+|           | CREATE语句    | LOAD CSV语句               | Batch Inserter               | Batch Import                     | Neo4j-import                             |
 | --------- | ----------- | ------------------------ | ---------------------------- | -------------------------------- | ---------------------------------------- |
-| 适用场景（节点数） | 1 ~ 1w      | 1w ~  10 w               | 千万以上                       | 千万以上                           | 千万以上                                   |
+| 适用场景 | 1 ~ 1w nodes     | 1w ~  10 w nodes              | 千万以上 nodes                       | 千万以上 nodes                           | 千万以上 nodes                                   |
 | 速度        | 很慢 (1000 nodes/s)          | 一般 (5000 nodes/s)                      | 非常快 (数万 nodes/s)                         | 非常快 (数万 nodes/s)                             | 非常快 (数万 nodes/s)                                     |
 | 优点        | 使用方便，可实时插入。 | 使用方便，可以加载本地/远程CSV；可实时插入。 | 速度相比于前两个，有数量级的提升             | 基于Batch Inserter，可以直接运行编译好的jar包；**可以在已存在的数据库中导入数据** | 官方出品，比Batch Import占用更少的资源                |
 | 缺点        | 速度慢         | 需要将数据转换成CSV              | 需要转成CSV；**只能在JAVA中使用**；且插入时**必须停止neo4j** | 需要转成CSV；**必须停止neo4j**                        | 需要转成CSV；**必须停止neo4j**；**只能生成新的数据库，而不能在已存在的数据库中插入数据。** |
@@ -38,43 +38,47 @@ categories: technique
 
 下面是我自己做的一些性能测试：
 
-1. CREATE 语句  （每1000条进行一次Transaction提交）
+### 1. CREATE 语句  
 
-	```
-	CREATE (:label {property1:value, property2:value, property3:value} )
-	```
-	| 11.5w nodes | 18.5w nodes|
-	| :--------: | :--------:|
-	| 100 s    |   160 s |
+这里每1000条进行一次Transaction提交
+
+```
+CREATE (:label {property1:value, property2:value, property3:value} )
+```
+
+| 11.5w nodes | 18.5w nodes|
+| -------- | --------|
+| 100 s    |   160 s |
 
 
-2. LOAD CSV 语句 
+### 2. LOAD CSV 语句 
 	
-	```
-	using periodic commit 1000
-	load csv from "file:///fscapture_screencapture_syscall.csv" as line
-	create (:label {a:line[1], b:line[2], c:line[3], d:line[4], e:line[5], f:line[6], g:line[7], h:line[8], i:line[9], j:line[10]})
-	```
+```
+using periodic commit 1000
+load csv from "file:///fscapture_screencapture_syscall.csv" as line
+create (:label {a:line[1], b:line[2], c:line[3], d:line[4], e:line[5], f:line[6], g:line[7], h:line[8], i:line[9], j:line[10]})
+```
 
-	这里使用了语句USING PERIODIC COMMIT 1000，使得每1000行作为一次Transaction提交。
-	
-	| 11.5w nodes | 18.5w nodes|
-	| :--------: | :--------:|
-	| 21 s    |   39 s |
+这里使用了语句USING PERIODIC COMMIT 1000，使得每1000行作为一次Transaction提交。
+
+| 11.5w nodes | 18.5w nodes|
+| -------- | --------|
+| 21 s    |   39 s |
 
 
-3. Batch Inserter、Batch Import、Neo4j-import
-	我只测试了Neo4j-import，没有测试Batch Inserter和Batch Import，但是我估计他们的内部实现差不多，速度也处于一个数量级别上，因此这里就一概而论了。
+### 3. Batch Inserter、Batch Import、Neo4j-import
 	
-    neo4j-import需要在Neo4j所在服务器执行，因此服务器的资源影响数据导入的性能，我这里为JVM分配了16G的heap资源，确保性能达到最好。
-	
-	```
-	sudo ./bin/neo4j-import --into graph.db --nodes:label path_to_csv.csv
-	```
-	
-	| 11.5w nodes | 18.5w nodes| 150w nodes + 1431w edges | 3113w nodes + 7793w edges |
-	| :--------: | :--------: |  :--------: | :------------:|
-	| 3.4 s    |   3.8 s | 26.5 s | 3 m 48 s |
+我只测试了Neo4j-import，没有测试Batch Inserter和Batch Import，但是我估计他们的内部实现差不多，速度也处于一个数量级别上，因此这里就一概而论了。
+
+neo4j-import需要在Neo4j所在服务器执行，因此服务器的资源影响数据导入的性能，我这里为JVM分配了16G的heap资源，确保性能达到最好。
+
+```
+sudo ./bin/neo4j-import --into graph.db --nodes:label path_to_csv.csv
+```
+
+| 11.5w nodes | 18.5w nodes| 150w nodes + 1431w edges | 3113w nodes + 7793w edges |
+| -------- | -------- |  -------- | ------------|
+| 3.4 s    |   3.8 s | 26.5 s | 3 m 48 s |
 
 
 
