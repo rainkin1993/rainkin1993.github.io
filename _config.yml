@@ -25,7 +25,7 @@ url: "http://paradoxlife.me" # the base hostname & protocol for your site
 # Build settings
 markdown: kramdown
 kramdown:
-  input:         GFM
+  input: GFM
 
 
 permalink: /:title
